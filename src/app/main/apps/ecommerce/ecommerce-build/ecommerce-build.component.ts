@@ -3,6 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import Stepper from 'bs-stepper';
 
 import { EcommerceService } from 'app/main/apps/ecommerce/ecommerce.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ecommerce-build',
@@ -16,7 +17,7 @@ export class EcommerceBuildComponent implements OnInit {
   public contentHeader: object;
   public products;
   public currentBuild:any;
-
+  public categoryList = ['cpu','gpu','ram','storage','motherboard','case','power','cpucooler','sound','other'];
   public address = {
     fullNameVar: '',
     numberVar: '',
@@ -35,16 +36,23 @@ export class EcommerceBuildComponent implements OnInit {
    *
    * @param {EcommerceService} _ecommerceService
    */
-  constructor(private _ecommerceService: EcommerceService) {}
+  constructor(private _ecommerceService: EcommerceService,
+    private _router:Router) {}
 
   // Public Methods
   // -----------------------------------------------------------------------------------------------------
+  eventHandler(event,category){
+    if (event){
+      if (event=='add'){
+        this._router.navigateByUrl('apps/e-commerce/shop');
+      }
+    }
+  }
   getBuildItem(id){
     const indexRef = this.currentBuild.findIndex(currentBuildRef => currentBuildRef.productId === id); // Get the index ref
     return this.currentBuild[indexRef];
   }
   qtyChange(event,product){
-    console.log("qtyChanged",event);
     this._ecommerceService.addToBuild(product.id,event);
   }
   /**
@@ -112,14 +120,16 @@ export class EcommerceBuildComponent implements OnInit {
     });
 
     // Subscribe to currentBuild change
-    this._ecommerceService.onCurrentBuildChange.subscribe(res => (this.currentBuild = res));
-    // update product is in currentBuild & is in CartList : Boolean
-    this.products.forEach(product => {
+    this._ecommerceService.onCurrentBuildChange.subscribe(res => {
+      this.currentBuild = res;
+       // update product is in currentBuild & is in CartList : Boolean
+      this.products.forEach(product => {
       
-      product.isInBuild = this.currentBuild.findIndex(p => p.productId === product.id) > -1;
-    });
-    console.error(this.products);
-  this.products.isInBuild = true;
+        product.isInBuild = this.currentBuild.findIndex(p => p.productId === product.id) > -1;
+      });
+    });  
+    
+    this.products.isInBuild = true;
     this.checkoutStepper = new Stepper(document.querySelector('#checkoutStepper'), {
       linear: false,
       animation: true
@@ -127,7 +137,7 @@ export class EcommerceBuildComponent implements OnInit {
 
     // content header
     this.contentHeader = {
-      headerTitle: 'Checkout',
+      headerTitle: 'Select Parts',
       actionButton: true,
       breadcrumb: {
         type: '',
@@ -138,12 +148,12 @@ export class EcommerceBuildComponent implements OnInit {
             link: '/'
           },
           {
-            name: 'eCommerce',
+            name: 'Shop',
             isLink: true,
             link: '/'
           },
           {
-            name: 'Checkout',
+            name: 'Build',
             isLink: false
           }
         ]

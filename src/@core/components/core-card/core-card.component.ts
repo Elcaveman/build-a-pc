@@ -26,6 +26,7 @@ export class CoreCardComponent implements OnInit {
 
   // default action-views
   public actionsView = {
+    add:false,
     collapse: false,
     expand: false,
     reload: false,
@@ -63,6 +64,11 @@ export class CoreCardComponent implements OnInit {
    * ng On Init
    */
   ngOnInit() {
+    // show expand icon if actions includes 'add'
+    if (this.actions.includes('add')) {
+      this.actionsView.add = true;
+    }
+
     // show collapse icon if actions includes 'collapse'
     if (this.actions.includes('collapse')) {
       this.actionsView.collapse = true;
@@ -105,6 +111,9 @@ export class CoreCardComponent implements OnInit {
   /**
    * Collapse
    */
+  add(){
+    this.events.emit('add');
+  }
   collapse() {
     this.events.emit('collapse');
     const cardHeaderEl = this.cardHeader.nativeElement;

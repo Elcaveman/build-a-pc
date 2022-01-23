@@ -271,7 +271,7 @@ export class EcommerceService implements Resolve<any> {
     const indexRef = this.currentBuild.findIndex(currentBuildRef => currentBuildRef.productId === id); // Get the index ref
     const Ref = this.currentBuild[indexRef];
     
-    if (Ref == 'undefined'){
+    if (typeof Ref == 'undefined'){
     return new Promise<void>((resolve, reject) => {
       const maxValueId = Math.max(...this.currentBuild.map(item => item.id), 0) + 1;
       const currentBuildRef = { id: maxValueId, productId: id, qty: 1 };
@@ -313,23 +313,23 @@ export class EcommerceService implements Resolve<any> {
     const indexRef = this.currentBuild.findIndex(currentBuildRef => currentBuildRef.productId === id); // Get the index ref
     const Ref = this.currentBuild[indexRef];
     const indexId = Ref.id; // Get the product wishlist id from indexRef
-    if (Ref.qty>1){
-      Ref.qty -=1;
-      return new Promise<void>((resolve, reject) => {
-        this._httpClient.put('api/ecommerce-userBuild/' + indexId, {...Ref}).subscribe((response: any) => {
-          this.getCurrentBuild();
-          resolve();
-        }, reject);
-        });
-    }
-    else{
+    // if (Ref.qty>1){
+    //   Ref.qty -=1;
+    //   return new Promise<void>((resolve, reject) => {
+    //     this._httpClient.put('api/ecommerce-userBuild/' + indexId, {...Ref}).subscribe((response: any) => {
+    //       this.getCurrentBuild();
+    //       resolve();
+    //     }, reject);
+    //     });
+    // }
+    // else{
       return new Promise<void>((resolve, reject) => {
         this._httpClient.delete('api/ecommerce-userBuild/' + indexId).subscribe((response: any) => {
           this.getCurrentBuild();
           resolve();
         }, reject);
     });
-    }   
+    //}   
   }
 
 }

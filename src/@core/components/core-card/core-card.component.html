@@ -10,6 +10,12 @@
     <!-- heading elements -->
     <div class="heading-elements">
       <ul class="list-inline mb-0">
+        <!-- add -->
+        <li *ngIf="actionsView.add" (click)="add()">
+            <a data-action="add">
+              <i class="feather icon-plus"></i>
+            </a>
+          </li>
         <!-- collapse -->
         <li *ngIf="actionsView.collapse" (click)="collapse()">
           <a data-action="collapse" [ngClass]="{ rotate: onclickEvent.collapseStatus }">

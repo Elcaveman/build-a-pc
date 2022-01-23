@@ -22,6 +22,7 @@ import { EcommerceSidebarComponent } from 'app/main/apps/ecommerce/ecommerce-sho
 import { EcommerceWishlistComponent } from 'app/main/apps/ecommerce/ecommerce-wishlist/ecommerce-wishlist.component';
 import { EcommerceCheckoutComponent } from 'app/main/apps/ecommerce/ecommerce-checkout/ecommerce-checkout.component';
 import { EcommerceCheckoutItemComponent } from 'app/main/apps/ecommerce/ecommerce-checkout/ecommerce-checkout-item/ecommerce-checkout-item.component';
+import { CoreCardModule } from '@core/components/core-card/core-card.module';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -96,6 +97,7 @@ const routes: Routes = [
     CoreTouchspinModule,
     ContentHeaderModule,
     CoreSidebarModule,
+    CoreCardModule,
     CoreCommonModule,
     NgbModule,
     NouisliderModule

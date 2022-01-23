@@ -36,6 +36,7 @@ export class EcommerceFakeData {
       price: 29.99,
       image: 'assets/images/pages/eCommerce/25.png',
       hasFreeShipping: true,
+      category:"motherboard",
       rating: 5
     },
     {
@@ -48,6 +49,7 @@ export class EcommerceFakeData {
       price: 23.99,
       image: 'assets/images/pages/eCommerce/24.png',
       hasFreeShipping: true,
+      category:"ram",
       rating: 2
     },
     {
@@ -59,6 +61,7 @@ export class EcommerceFakeData {
       price: 69.99,
       image: 'assets/images/pages/eCommerce/23.png',
       hasFreeShipping: true,
+      category:"storage",
       rating: 2
     },
     {
@@ -71,6 +74,7 @@ export class EcommerceFakeData {
       price: 29.99,
       image: 'assets/images/pages/eCommerce/22.png',
       hasFreeShipping: false,
+      category:"gpu",
       rating: 4
     },
     {
@@ -83,6 +87,7 @@ export class EcommerceFakeData {
       price: 56.0,
       image: 'assets/images/pages/eCommerce/21.png',
       hasFreeShipping: false,
+      category:"case",
       rating: 3
     },
     {
@@ -95,6 +100,7 @@ export class EcommerceFakeData {
       price: 339.95,
       image: 'assets/images/pages/eCommerce/20.png',
       hasFreeShipping: false,
+      category:"power",
       rating: 4
     },
     {
@@ -107,6 +113,7 @@ export class EcommerceFakeData {
       price: 16.99,
       image: 'assets/images/pages/eCommerce/19.png',
       hasFreeShipping: true,
+      category:"power",
       rating: 4
     },
     {
@@ -119,6 +126,7 @@ export class EcommerceFakeData {
       price: 645.0,
       image: 'assets/images/pages/eCommerce/18.png',
       hasFreeShipping: false,
+      category:"power",
       rating: 1
     },
     {
@@ -131,6 +139,7 @@ export class EcommerceFakeData {
       price: 39.99,
       image: 'assets/images/pages/eCommerce/17.png',
       hasFreeShipping: true,
+      category:"sound",
       rating: 3
     },
     {
@@ -143,6 +152,7 @@ export class EcommerceFakeData {
       price: 54.59,
       image: 'assets/images/pages/eCommerce/16.png',
       hasFreeShipping: false,
+      category:"other",
       rating: 5
     },
     {
@@ -155,6 +165,7 @@ export class EcommerceFakeData {
       price: 29.99,
       image: 'assets/images/pages/eCommerce/15.png',
       hasFreeShipping: true,
+      category:"other",
       rating: 5
     },
     {
@@ -167,6 +178,7 @@ export class EcommerceFakeData {
       price: 10.83,
       image: 'assets/images/pages/eCommerce/14.png',
       hasFreeShipping: true,
+      category:"other",
       rating: 3
     },
     {
@@ -179,6 +191,7 @@ export class EcommerceFakeData {
       price: 99.99,
       image: 'assets/images/pages/eCommerce/13.png',
       hasFreeShipping: true,
+      category:"other",
       rating: 2
     },
     {
@@ -191,6 +204,7 @@ export class EcommerceFakeData {
       price: 799.99,
       image: 'assets/images/pages/eCommerce/12.png',
       hasFreeShipping: false,
+      category:"other",
       rating: 3
     },
     {
@@ -202,7 +216,7 @@ export class EcommerceFakeData {
       brand: 'Nike',
       price: 81.99,
       image: 'assets/images/pages/eCommerce/11.png',
-      hasFreeShipping: true,
+      hasFreeShipping: true,category:"other",
       rating: 5
     },
     {
@@ -215,12 +229,12 @@ export class EcommerceFakeData {
       price: 81.99,
       image: 'assets/images/pages/eCommerce/10.png',
       hasFreeShipping: false,
-      rating: 4
+      rating: 4,category:"other",
     },
     {
       id: 19,
       name: 'OnePlus 7 Pro ',
-      slug: 'one-plus-7-pro-19',
+      slug: 'one-plus-7-pro-19',category:"other",
       brand: 'Philips',
       price: 14.99,
       image: 'assets/images/pages/eCommerce/9.png',
@@ -239,7 +253,7 @@ export class EcommerceFakeData {
       brand: 'Apple',
       price: 7999.99,
       image: 'assets/images/pages/eCommerce/8.png',
-      hasFreeShipping: false,
+      hasFreeShipping: false,category:"other",
       rating: 5,
       description: `Sony 4K Ultra HD LED TV has 4K HDR Support. The TV provides clear visuals and provides distinct sound quality
     and an immersive experience. This TV has Yes HDMI ports & Yes USB ports. Connectivity options included are HDMI.
@@ -253,7 +267,7 @@ export class EcommerceFakeData {
       price: 129.29,
       image: 'assets/images/pages/eCommerce/7.png',
       hasFreeShipping: true,
-      rating: 4,
+      rating: 4,category:"other",
       description: `Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use
     voice commands to enjoy music, get answers from Google and manage everyday tasks. Google Home is compatible with
     Android and iOS operating systems, and can control compatible smart devices such as Chromecast or Nest.`
@@ -265,7 +279,7 @@ export class EcommerceFakeData {
       brand: 'Sharp',
       price: 429.99,
       image: 'assets/images/pages/eCommerce/6.png',
-      hasFreeShipping: false,
+      hasFreeShipping: false,category:"other",
       rating: 3,
       description: `The Nintendo Switch Pro Controller is one of the priciest "baseline" controllers in the current console
     generation, but it's also sturdy, feels good to play with, has an excellent direction pad, and features
@@ -279,7 +293,7 @@ export class EcommerceFakeData {
       brand: 'Apple',
       price: 999.99,
       image: 'assets/images/pages/eCommerce/5.png',
-      hasFreeShipping: false,
+      hasFreeShipping: false,category:"other",
       rating: 4,
       description: `MacBook Air is a thin, lightweight laptop from Apple. MacBook Air features up to 8GB of memory, a
     fifth-generation Intel Core processor, Thunderbolt 2, great built-in apps, and all-day battery life.1 Its thin,
@@ -293,7 +307,7 @@ export class EcommerceFakeData {
       brand: 'OneOdio',
       price: 49.99,
       image: 'assets/images/pages/eCommerce/4.png',
-      hasFreeShipping: true,
+      hasFreeShipping: true,category:"other",
       rating: 3,
       description: `Omnidirectional detachable boom mic upgrades the headphones into a professional headset for gaming, business,
     podcasting and taking calls on the go. Better pick up your voice. Control most electric devices through voice
@@ -307,7 +321,7 @@ export class EcommerceFakeData {
       brand: 'Apple',
       price: 999.99,
       image: 'assets/images/pages/eCommerce/3.png',
-      hasFreeShipping: true,
+      hasFreeShipping: true,category:"other",
       rating: 4,
       description: `The all-in-one for all. If you can dream it, you can do it on iMac. It’s beautifully & incredibly intuitive and
     packed with tools that let you take any idea to the next level. And the new 27-inch model elevates the
@@ -320,7 +334,7 @@ export class EcommerceFakeData {
       name: 'Apple iPhone 11 (64GB, Black)',
       slug: 'apple-i-phone-11-64-gb-black-26',
       brand: 'Apple',
-      price: 669.99,
+      price: 669.99,category:"gpu",
       image: 'assets/images/pages/eCommerce/2.png',
       hasFreeShipping: true,
       rating: 5,
@@ -334,7 +348,7 @@ export class EcommerceFakeData {
       name: 'Apple Watch Series 5',
       slug: 'apple-watch-series-5-27',
       brand: 'Apple',
-      price: 339.99,
+      price: 339.99,category:"gpu",
       image: 'assets/images/pages/eCommerce/1.png',
       hasFreeShipping: true,
       rating: 4,
@@ -353,7 +367,7 @@ export class EcommerceFakeData {
       slug: 'willful-smart-watch-for-men-women-2020-3',
       description:
         'Are you looking for a smart watch, which can not only easily keep tracking of your steps, calories, heart rate and sleep quality, but also keep you informed of incoming calls.',
-      brand: 'Willful',
+      brand: 'Willful',category:"gpu",
       price: 29.99,
       image: 'assets/images/pages/eCommerce/25.png',
       hasFreeShipping: true,
@@ -368,7 +382,7 @@ export class EcommerceFakeData {
       brand: 'Ronyes',
       price: 23.99,
       image: 'assets/images/pages/eCommerce/24.png',
-      hasFreeShipping: true,
+      hasFreeShipping: true,category:"gpu",
       rating: 2
     },
     {
@@ -379,7 +393,7 @@ export class EcommerceFakeData {
       brand: 'Toshiba',
       price: 69.99,
       image: 'assets/images/pages/eCommerce/23.png',
-      hasFreeShipping: true,
+      hasFreeShipping: true,category:"gpu",
       rating: 2
     },
     {
@@ -391,7 +405,7 @@ export class EcommerceFakeData {
       brand: 'Tile',
       price: 29.99,
       image: 'assets/images/pages/eCommerce/22.png',
-      hasFreeShipping: false,
+      hasFreeShipping: false,category:"gpu",
       rating: 4
     },
     {
@@ -400,7 +414,7 @@ export class EcommerceFakeData {
       slug: 'bugani-m90-portable-bluetooth-speaker-7',
       description:
         'Bluetooth Speakers-The M90 Bluetooth speaker uses the latest Bluetooth 5.0 technology and the latest Bluetooth ATS chip, Connecting over Bluetooth in seconds to iPhone, iPad, Smart-phones, Tablets, Windows, and other Bluetooth devices.',
-      brand: 'Bugani',
+      brand: 'Bugani',category:"gpu",
       price: 56.0,
       image: 'assets/images/pages/eCommerce/21.png',
       hasFreeShipping: false,
@@ -413,7 +427,7 @@ export class EcommerceFakeData {
       description:
         'All the greatest, games, TV, music and more. Connect with your friends to broadcast and celebrate your epic moments at the press of the Share button to Twitch, YouTube, Facebook and Twitter.',
       brand: 'Sony',
-      price: 339.95,
+      price: 339.95,category:"gpu",
       image: 'assets/images/pages/eCommerce/20.png',
       hasFreeShipping: false,
       rating: 4

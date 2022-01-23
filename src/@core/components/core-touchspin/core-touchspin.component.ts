@@ -55,7 +55,6 @@ export class CoreTouchspinComponent implements OnInit {
         this.disabledValueDecrement = true;
       }
     }
-    console.log("increment");
     this.numberValueChange.emit(this.numberValue);
   }
 
@@ -78,7 +77,6 @@ export class CoreTouchspinComponent implements OnInit {
         this.disabledValueIncrement = true;
       }
     }
-    console.log("decrement");
     this.numberValueChange.emit(this.numberValue);
   }
 

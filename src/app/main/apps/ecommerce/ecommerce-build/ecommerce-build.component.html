@@ -7,11 +7,11 @@
         <div class="step" data-target="#step-cart">
           <button type="button" class="step-trigger">
             <span class="bs-stepper-box">
-              <i data-feather="shopping-cart" class="font-medium-3"></i>
+              <i data-feather="airplay" class="font-medium-3"></i>
             </span>
             <span class="bs-stepper-label">
-              <span class="bs-stepper-title">Cart</span>
-              <span class="bs-stepper-subtitle">Your Cart Items</span>
+              <span class="bs-stepper-title">Build</span>
+              <span class="bs-stepper-subtitle">Your Build Items</span>
             </span>
           </button>
         </div>
@@ -52,9 +52,16 @@
           <div id="place-order" class="list-view product-checkout">
             <!-- Checkout Place Order Left starts -->
             <div class="checkout-items">
+              <ng-container *ngFor="let categ of categoryList">
+                  <core-card
+                  [actions]="['collapse','add']"
+                  (events) = "eventHandler($event,categ)"
+                  >
+                  <h4 class="card-title">Add {{categ}}</h4>
               <ng-container *ngFor="let product of products">
-                <ng-container *ngIf="product.isInBuild == true">
-                  <div class="card ecommerce-card">
+                <ng-container *ngIf="product">
+                  <ng-container *ngIf="product.isInBuild == true && product.category==categ">
+                    <div class="card ecommerce-card">
                     <div class="item-img">
                       <a [routerLink]="'/apps/e-commerce/details/' + product.id">
                         <img [src]="product.image" alt="img-placeholder" />
@@ -67,9 +74,6 @@
                         </h6>
                         <span class="item-company"
                           >By <a href="javascript:void(0)" class="company-name">{{ product.brand }}</a></span
-                        >
-                        <span class="item-company"
-                          >Category <a href="javascript:void(0)" class="company-name">{{ product.category }}</a></span
                         >
                         <div class="item-rating">
                           <div class="rating rating-sm">
@@ -94,6 +98,13 @@
                       <span class="text-success">17% off 4 offers Available</span>
                     </div>
                     <div class="item-options text-center">
+                      
+                      <div class="item-wrapper">
+                      <span class="item-company"
+                        >Category 
+                        <a href="javascript:void(0)" class="company-name">{{ product.category }}
+                        </a></span>
+                      </div>
                       <div class="item-wrapper">
                         <div class="item-cost">
                           <h4 class="item-price">${{ product.price }}</h4>
@@ -114,8 +125,11 @@
                         <span class="text-truncate">Add to Wishlist</span>
                       </button>
                     </div>
-                  </div>
+                    </div>
+                  </ng-container>  
+                </ng-container>
                 </ng-container>  
+              </core-card>
               </ng-container>
             </div>
             <!-- Checkout Place Order Left ends -->

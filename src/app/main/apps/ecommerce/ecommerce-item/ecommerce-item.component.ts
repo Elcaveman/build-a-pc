@@ -26,36 +26,25 @@ export class EcommerceItemComponent implements OnInit {
   // Public Methods
   // -----------------------------------------------------------------------------------------------------
 
-  /**
-   * Toggle Wishlist
-   *
-   * @param product
-   */
-  toggleWishlist(product) {
-    if (product.isInWishlist === true) {
-      this._ecommerceService.removeFromWishlist(product.id).then(res => {
-        product.isInWishlist = false;
+  toggleWishlist() {
+    if (this.product.isInWishlist === true) {
+      this._ecommerceService.removeFromWishlist(this.product.id).then(res => {
+        this.product.isInWishlist = false;
       });
     } else {
-      this._ecommerceService.addToWishlist(product.id).then(res => {
-        product.isInWishlist = true;
+      this._ecommerceService.addToWishlist(this.product.id).then(res => {
+        this.product.isInWishlist = true;
       });
     }
   }
-
-  /**
-   * Add To Cart
-   *
-   * @param product
-   */
-  addToCart(product) {
-    this._ecommerceService.addToCart(product.id).then(res => {
-      product.isInCart = true;
+  addToCart() {
+    this._ecommerceService.addToCart(this.product.id).then(res => {
+      this.product.isInCart = true;
     });
   }
-  addToCurrentBuild(product) {
-    this._ecommerceService.addToBuild(product.id).then(res => {
-      product.isInBuild = true;
+  addToCurrentBuild() {
+    this._ecommerceService.addToBuild(this.product.id).then(res => {
+      this.product.isInBuild = true;
     });
   }
   // Lifecycle Hooks
