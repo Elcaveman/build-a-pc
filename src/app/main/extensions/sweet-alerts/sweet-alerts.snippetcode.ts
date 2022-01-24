@@ -49,7 +49,7 @@ export const snippetCodeBasic: snippetCode = {
     #SweetAlertHTML
     title="<strong>HTML <u>example</u></strong>"
     text="Something went wrong!"
-    html='You can use <b>bold text</b>, <a href="https://pixinvent.com/" target="_blank">links</a> and other HTML tags'
+    html='You can use <b>bold text</b>, <a href="https://Buildi Liya.com/" target="_blank">links</a> and other HTML tags'
     icon="info"
     [focusCancel]="true"
     [showCloseButton]="true"

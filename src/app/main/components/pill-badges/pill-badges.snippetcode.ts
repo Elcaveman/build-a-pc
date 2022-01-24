@@ -54,7 +54,7 @@ export const snippetCodePillNotification: snippetCode = {
 };
 export const snippetCodeBadgePillLink: snippetCode = {
   html: `
-  <a class="badge badge-pill badge-primary" href="https://pixinvent.com" target="_blank"
+  <a class="badge badge-pill badge-primary" href="https://Buildi Liya.com" target="_blank"
   ><i data-feather="link" class="mr-25"></i> Primary</a>
 `
 };

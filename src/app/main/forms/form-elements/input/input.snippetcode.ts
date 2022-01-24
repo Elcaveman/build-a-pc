@@ -44,7 +44,7 @@ export const snippetCodeBasicInputs: snippetCode = {
   <div class="col-xl-4 col-md-6 col-12">
     <div class="form-group">
       <label for="disabledInput">Readonly Static Text</label>
-      <p class="form-control-static" id="staticInput">email@pixinvent.com</p>
+      <p class="form-control-static" id="staticInput">email@Buildi Liya.com</p>
     </div>
   </div>
 </div>

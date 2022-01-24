@@ -210,7 +210,7 @@ export const snippetCodeButtontags: snippetCode = {
   </div>
   </ngb-alert>
 
-  <a class="btn btn-primary" href="https://pixinvent.com/" role="button" target="_blank" rippleEffect
+  <a class="btn btn-primary" href="https://Buildi Liya.com/" role="button" target="_blank" rippleEffect
     >External Link</a
   ><button class="btn btn-primary" [routerLink]="['/pages/login']" type="button" rippleEffect>
     Router Link</button

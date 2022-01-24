@@ -16,8 +16,8 @@ import { CoreConfig } from '@core/types';
 // prettier-ignore
 export const coreConfig: CoreConfig = {
   app: {
-    appName     : 'Vuexy',                                        // App Name
-    appTitle    : 'Vuexy - Angular 11+ Bootstrap Admin Template', // App Title
+    appName     : 'Buildi Liya',                                        // App Name
+    appTitle    : 'Buildi Liya', // App Title
     appLogoImage: 'assets/images/logo/logo.svg',                  // App Logo
   },
   layout: {
