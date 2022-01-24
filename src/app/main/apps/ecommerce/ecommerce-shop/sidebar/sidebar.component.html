@@ -57,66 +57,14 @@
     <div id="product-categories">
       <h6 class="filter-title">Categories</h6>
       <ul class="list-unstyled categories-list">
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category1" name="category-filter" class="custom-control-input" checked (change) = "filterProduct('category','cpu')"/>
-            <label class="custom-control-label" for="category1" >CPU</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category2" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','cpucooler')"/>
-            <label class="custom-control-label" for="category2" >CPU Cooler</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category3" name="category-filter" class="custom-control-input" (change)="filterProduct('category','motherboard')"/>
-            <label class="custom-control-label" for="category3" >Motherboard</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category4" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','ram')"/>
-            <label class="custom-control-label" for="category4" >RAM</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category5" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','storage')"/>
-            <label class="custom-control-label" for="category5" >Disk Storage</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category6" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','gpu')"/>
-            <label class="custom-control-label" for="category6" >GPU - Video Card</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category7" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','case')"/>
-            <label class="custom-control-label" for="category7">Case</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category8" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','power')"/>
-            <label class="custom-control-label" for="category8" >Power Supply</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category9" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','sound')"/>
-            <label class="custom-control-label" for="category9" >Sound Card</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="category10" name="category-filter" class="custom-control-input" (change) = "filterProduct('category','other')"/>
-            <label class="custom-control-label" for="category10" >Accessories/ Other</label>
-          </div>
-        </li>
+          <li *ngFor="let filter of filters">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="{{filter.name}}" name="category-filter" class="custom-control-input" 
+                [checked]="defaultFilter == filter.name" 
+                (change) = "filterProduct('category',filter.name)"/>
+                <label class="custom-control-label" for="{{filter.name}}" >{{filter.verboseName}}</label>
+              </div>
+            </li>
       </ul>
     </div>
     <!-- Categories Ends -->

@@ -14,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EcommerceShopComponent implements OnInit {
   // public
   public contentHeader: object;
+  public defaultFilter = "all";
   public shopSidebarToggle = false;
   public shopSidebarReset = false;
   public gridViewRef = true;
@@ -32,6 +33,7 @@ export class EcommerceShopComponent implements OnInit {
    * @param {EcommerceService} _ecommerceService
    */
   constructor(
+    private _route: ActivatedRoute,
     private _coreSidebarService: CoreSidebarService,
     private _ecommerceService: EcommerceService) {}
 
@@ -76,6 +78,12 @@ export class EcommerceShopComponent implements OnInit {
    */
   ngOnInit(): void {
     // Subscribe to ProductList change
+    this._route.queryParams
+    .subscribe(params => {
+      console.log(params); // { filter: "gpu" }
+      this.defaultFilter = params.filter;
+    }
+    );
 
     this._ecommerceService.onProductListChange.subscribe(res => {
       this.products = res;

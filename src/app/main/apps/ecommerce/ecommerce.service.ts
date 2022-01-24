@@ -181,7 +181,14 @@ export class EcommerceService implements Resolve<any> {
     this.onProductListChange.next(this.productList);
   }
   filterProduct(sortBy,value){
-    const sortedData = this.productList.filter(this.filterRef(sortBy,value));
+    let sortedData;
+    console.log(value);
+    if (value=='all'){
+      sortedData = this.productList;
+    }
+    else{
+      sortedData = this.productList.filter(this.filterRef(sortBy,value));
+    }
     this.onProductListChange.next(sortedData);
   }
 

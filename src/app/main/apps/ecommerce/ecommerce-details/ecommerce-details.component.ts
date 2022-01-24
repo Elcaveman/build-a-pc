@@ -73,7 +73,11 @@ export class EcommerceDetailsComponent implements OnInit {
       });
     }
   }
-
+  addToCurrentBuild(product) {
+    this._ecommerceService.addToBuild(product.id).then(res => {
+      this.product.isInBuild = true;
+    });
+  }
   /**
    * Add To Cart
    *

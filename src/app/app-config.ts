@@ -1,28 +1,15 @@
 import { CoreConfig } from '@core/types';
 
-/**
- * Default App Config
- *
- * ? TIP:
- *
- * Change app config based on your preferences.
- * You can also change them per component basis. i.e `app/main/pages/authentication/auth-login-v1/auth-login-v1.component.ts`
- *
- * ! IMPORTANT: Make sure you clear the browser local storage (https://developers.google.com/web/tools/chrome-devtools/storage/localstorage#delete)
- * ! If enableLocalStorage option is true, else it will not take the below config changes and use stored config from local storage. *
- *
- */
-
 // prettier-ignore
 export const coreConfig: CoreConfig = {
   app: {
     appName     : 'Buildi Liya',                                        // App Name
     appTitle    : 'Buildi Liya', // App Title
-    appLogoImage: 'assets/images/logo/logo.svg',                  // App Logo
+    appLogoImage: 'assets/images/logo/logo.png',                  // App Logo
   },
   layout: {
-    skin  : 'default',                        // default, dark, bordered, semi-dark
-    type  : 'vertical',                       // vertical, horizontal
+    skin  : 'dark',                        // default, dark, bordered, semi-dark
+    type  : 'horizontal',                       // vertical, horizontal
     animation : 'fadeIn',                     // fadeInLeft, zoomIn , fadeIn, none
     menu : {
       hidden               : false,           // Boolean: true, false
@@ -32,20 +19,20 @@ export const coreConfig: CoreConfig = {
     navbar: {
       hidden               : false,           // Boolean: true, false
       type                 : 'floating-nav',  // navbar-static-top, fixed-top, floating-nav, d-none
-      background           : 'navbar-light',  // navbar-light. navbar-dark
+      background           : 'navbar-dark',  // navbar-light. navbar-dark
       customBackgroundColor: true,            // Boolean: true, false
       backgroundColor      : ''               // BS color i.e bg-primary, bg-success
     },
     footer: {
       hidden               : false,           // Boolean: true, false
       type                 : 'footer-static', // footer-static, footer-sticky, d-none
-      background           : 'footer-light',  // footer-light. footer-dark
+      background           : 'footer-dark',  // footer-light. footer-dark
       customBackgroundColor: false,           // Boolean: true, false
       backgroundColor      : ''               // BS color i.e bg-primary, bg-success
     },
     enableLocalStorage: true,
-    customizer  : true,                       // Boolean: true, false (Enable theme customizer)
+    customizer  : false,                       // Boolean: true, false (Enable theme customizer)
     scrollTop   : true,                       // Boolean: true, false (Enable scroll to top button)
-    buyNow      : true                        // Boolean: true, false (Set false in real project, For demo purpose only)
+    buyNow      : false                        // Boolean: true, false (Set false in real project, For demo purpose only)
   }
 }

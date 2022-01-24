@@ -39,6 +39,9 @@
         <p class="card-text shipping" *ngIf="product.hasFreeShipping">
           <span class="badge badge-pill badge-light-success">Free Shipping</span>
         </p>
+        <p class="card-text shipping" *ngIf="!product.hasFreeShipping">
+          <span class="badge badge-pill badge-light-success">Shipping: {{product?.shippingPrice}} MAD</span>
+        </p>
       </div>
     </div>
     <button type="button" class="btn btn-light mt-1 remove-wishlist" (click)="removeFromCart(product)" rippleEffect>

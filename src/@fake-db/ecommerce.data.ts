@@ -266,7 +266,9 @@ export class EcommerceFakeData {
       brand: 'Google',
       price: 129.29,
       image: 'assets/images/pages/eCommerce/7.png',
-      hasFreeShipping: true,
+      hasFreeShipping: false,
+      isInBuild:true,
+      shippingPrice:25.0,
       rating: 4,category:"other",
       description: `Simplify your everyday life with the Google Home, a voice-activated speaker powered by the Google Assistant. Use
     voice commands to enjoy music, get answers from Google and manage everyday tasks. Google Home is compatible with
@@ -337,6 +339,7 @@ export class EcommerceFakeData {
       price: 669.99,category:"gpu",
       image: 'assets/images/pages/eCommerce/2.png',
       hasFreeShipping: true,
+      isInBuild:false,
       rating: 5,
       description: `The Apple iPhone 11 is a great smartphone, which was loaded with a lot of quality features. It comes with a
     waterproof and dustproof body which is the key attraction of the device. The excellent set of cameras offer
@@ -352,6 +355,7 @@ export class EcommerceFakeData {
       image: 'assets/images/pages/eCommerce/1.png',
       hasFreeShipping: true,
       rating: 4,
+      isInBuild:true,
       description: `On Retina display that never sleeps, so it’s easy to see the time and other important information, without
     raising or tapping the display. New location features, from a built-in compass to current elevation, help users
     better navigate their day, while international emergency calling1 allows customers to call emergency services

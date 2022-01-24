@@ -36,6 +36,9 @@
       <p class="card-text shipping" *ngIf="product.hasFreeShipping">
         <span class="badge badge-pill badge-light-success">Free Shipping</span>
       </p>
+      <p class="card-text shipping" *ngIf="!product.hasFreeShipping">
+        <span class="badge badge-pill badge-light-success">Shipping: {{product?.shippingPrice}} MAD</span>
+      </p>
     </div>
   </div>
   <a
@@ -78,7 +81,7 @@
     <span class="add-to-cart">View in cart</span>
   </a>
   <a
-    *ngIf="product.isInBuild !== true"
+    *ngIf="product.isInBuild != true"
     href="javascript:void(0)"
     class="btn btn-secondary btn-cart"
     (click)="addToCurrentBuild()"
@@ -88,7 +91,7 @@
     <span class="add-to-cart">Add to Build</span>
   </a>
   <a
-    *ngIf="product.isInBuild === true"
+    *ngIf="product.isInBuild == true"
     routerLink="/apps/e-commerce/build"
     class="btn btn-success btn-cart"
     rippleEffect

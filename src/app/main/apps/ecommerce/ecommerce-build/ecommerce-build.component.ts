@@ -44,7 +44,7 @@ export class EcommerceBuildComponent implements OnInit {
   eventHandler(event,category){
     if (event){
       if (event=='add'){
-        this._router.navigateByUrl('apps/e-commerce/shop');
+        this._router.navigateByUrl(`apps/e-commerce/shop?filter=${category}`);
       }
     }
   }
