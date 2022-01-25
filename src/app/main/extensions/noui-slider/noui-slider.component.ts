@@ -237,7 +237,7 @@ export class NouiSliderComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'noUiSlider',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

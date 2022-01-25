@@ -99,7 +99,7 @@ export class EcommerceCheckoutComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Checkout',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

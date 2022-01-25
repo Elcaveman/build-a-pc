@@ -195,7 +195,7 @@ export class DatatablesComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Datatables',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

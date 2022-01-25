@@ -19,7 +19,7 @@ export class CardBasicComponent implements OnInit {
   ngOnInit() {
     this.contentHeader = {
       headerTitle: 'Basic Card',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

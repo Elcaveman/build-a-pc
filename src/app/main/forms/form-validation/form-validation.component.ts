@@ -62,7 +62,7 @@ export class FormValidationComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Form Validation',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

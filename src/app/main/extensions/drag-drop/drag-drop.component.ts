@@ -43,7 +43,7 @@ export class DragDropComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Drag & Drop',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

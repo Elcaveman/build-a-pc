@@ -230,7 +230,7 @@ export class TreeViewComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Tree View',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

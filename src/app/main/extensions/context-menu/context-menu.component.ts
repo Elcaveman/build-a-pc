@@ -35,7 +35,7 @@ export class ContextMenuComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Context Menu',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

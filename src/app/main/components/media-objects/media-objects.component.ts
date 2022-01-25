@@ -30,7 +30,7 @@ export class MediaObjectsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Media Objects',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -21,7 +21,7 @@ export class ColorsComponent implements OnInit {
   ngOnInit() {
     this.contentHeader = {
       headerTitle: 'Colors',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

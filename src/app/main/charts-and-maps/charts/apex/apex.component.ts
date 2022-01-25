@@ -897,7 +897,7 @@ export class ApexComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Apex Charts',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

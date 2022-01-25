@@ -29,7 +29,7 @@ export class InputComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Input',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

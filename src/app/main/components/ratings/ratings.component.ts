@@ -51,7 +51,7 @@ export class RatingsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Ratings',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

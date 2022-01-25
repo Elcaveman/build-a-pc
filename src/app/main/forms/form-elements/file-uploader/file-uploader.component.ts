@@ -42,7 +42,7 @@ export class FileUploaderComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'File Uploader',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

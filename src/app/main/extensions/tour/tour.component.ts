@@ -124,7 +124,7 @@ export class TourComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Tour',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

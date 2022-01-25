@@ -61,7 +61,7 @@ export class TooltipsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'tooltips',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

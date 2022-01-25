@@ -28,7 +28,7 @@ export class TimelineComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Timeline',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

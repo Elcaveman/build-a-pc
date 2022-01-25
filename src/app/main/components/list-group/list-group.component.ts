@@ -35,7 +35,7 @@ export class ListGroupComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'List Group',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

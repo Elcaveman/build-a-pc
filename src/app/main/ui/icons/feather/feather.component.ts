@@ -70,7 +70,7 @@ export class FeatherComponent implements OnInit {
     this.data = this.json;
     this.contentHeader = {
       headerTitle: 'Feather Icons',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

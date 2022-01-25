@@ -92,7 +92,7 @@ export class MediaPlayerComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Media Player',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

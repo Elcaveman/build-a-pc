@@ -28,7 +28,7 @@ export class BadgesComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Badges',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

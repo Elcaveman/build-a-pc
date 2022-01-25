@@ -9,7 +9,7 @@ import { EcommerceService } from 'app/main/apps/ecommerce/ecommerce.service';
 export class EcommerceSidebarComponent implements OnInit {
   // Public
   public sliderPriceValue = [1, 6];
-  @Input() defaultFilter ="all"
+  @Input() defaultFilter ="all";
   public filters = [{name:'all',verboseName:'All'}
   ,{name:'cpu',verboseName:'CPU - Microprocessor'}
   ,{name:'gpu',verboseName:'GPU - Video Card'}

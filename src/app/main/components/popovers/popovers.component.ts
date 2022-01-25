@@ -61,7 +61,7 @@ export class PopoversComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Popovers',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

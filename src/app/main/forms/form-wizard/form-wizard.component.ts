@@ -133,7 +133,7 @@ export class FormWizardComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Form Wizard',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

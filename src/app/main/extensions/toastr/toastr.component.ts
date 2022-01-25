@@ -280,7 +280,7 @@ export class ToastrComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Toastr',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

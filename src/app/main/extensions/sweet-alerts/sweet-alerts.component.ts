@@ -210,7 +210,7 @@ export class SweetAlertsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Sweet Alerts',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

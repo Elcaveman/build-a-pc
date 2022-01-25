@@ -20,7 +20,7 @@ export class BoxedLayoutComponent implements OnInit {
   ngOnInit() {
     this.contentHeader = {
       headerTitle: 'Layout Boxed',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

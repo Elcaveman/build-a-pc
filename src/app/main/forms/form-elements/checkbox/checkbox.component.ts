@@ -26,7 +26,7 @@ export class CheckboxComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Checkbox',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

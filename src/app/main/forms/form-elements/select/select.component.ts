@@ -218,7 +218,7 @@ export class SelectComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Select',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

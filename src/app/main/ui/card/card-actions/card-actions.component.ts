@@ -47,7 +47,7 @@ export class CardActionsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Card Actions',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

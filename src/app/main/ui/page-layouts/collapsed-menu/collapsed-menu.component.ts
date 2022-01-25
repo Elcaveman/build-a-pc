@@ -52,7 +52,7 @@ export class CollapsedMenuComponent implements OnInit {
 
     this.contentHeader = {
       headerTitle: 'Layout collapsed menu',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

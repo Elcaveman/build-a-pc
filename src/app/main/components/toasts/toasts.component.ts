@@ -59,7 +59,7 @@ export class ToastsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Toasts',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

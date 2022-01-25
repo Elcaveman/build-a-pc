@@ -225,7 +225,7 @@ export class BreadcrumbsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Breadcrumbs',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

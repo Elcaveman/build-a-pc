@@ -29,7 +29,7 @@ export class NumberInputComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Number Input',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -78,7 +78,7 @@ export class FlatpickrComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Flatpickr',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

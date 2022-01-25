@@ -60,7 +60,7 @@ export class ProfileComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Profile',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

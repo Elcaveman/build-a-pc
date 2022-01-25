@@ -34,7 +34,7 @@ export class SpinnerComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Spinner',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

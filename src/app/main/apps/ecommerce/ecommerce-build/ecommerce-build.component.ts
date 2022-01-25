@@ -138,7 +138,7 @@ export class EcommerceBuildComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Select Parts',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

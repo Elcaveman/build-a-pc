@@ -118,7 +118,7 @@ export class EcommerceDetailsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Product Details',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

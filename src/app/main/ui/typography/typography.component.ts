@@ -19,7 +19,7 @@ export class TypographyComponent {
   ngOnInit() {
     this.contentHeader = {
       headerTitle: 'Typography',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

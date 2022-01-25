@@ -75,7 +75,7 @@ export class I18nComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'i18n',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

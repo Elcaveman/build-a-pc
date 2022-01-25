@@ -42,7 +42,7 @@ export class ButtonsComponent implements OnInit {
   ngOnInit() {
     this.contentHeader = {
       headerTitle: 'Buttons',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

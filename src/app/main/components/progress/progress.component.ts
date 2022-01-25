@@ -30,7 +30,7 @@ export class ProgressComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Progress',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

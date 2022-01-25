@@ -1277,7 +1277,7 @@ export class ChartjsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Chartjs',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

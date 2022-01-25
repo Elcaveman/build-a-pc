@@ -22,7 +22,7 @@ export class FormLayoutComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Form Layouts',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

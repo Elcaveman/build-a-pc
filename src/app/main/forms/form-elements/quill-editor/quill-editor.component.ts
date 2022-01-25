@@ -149,7 +149,7 @@ theme: 'snow'
     // content header
     this.contentHeader = {
       headerTitle: 'Quill Editor',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -170,7 +170,7 @@ export class GoogleMapsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Google Maps',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

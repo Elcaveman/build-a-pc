@@ -32,7 +32,7 @@ export class AvatarComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Avatar',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

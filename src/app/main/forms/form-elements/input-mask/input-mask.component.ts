@@ -26,7 +26,7 @@ export class InputMaskComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Input Mask',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

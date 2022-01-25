@@ -32,7 +32,7 @@ export class DropdownsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Dropdowns',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

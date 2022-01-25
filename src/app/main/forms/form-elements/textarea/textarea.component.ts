@@ -25,7 +25,7 @@ export class TextareaComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Textarea',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

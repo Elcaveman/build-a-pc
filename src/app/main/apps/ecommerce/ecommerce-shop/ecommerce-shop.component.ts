@@ -81,7 +81,7 @@ export class EcommerceShopComponent implements OnInit {
     this._route.queryParams
     .subscribe(params => {
       console.log(params); // { filter: "gpu" }
-      this.defaultFilter = params.filter;
+      if (params.filter) this.defaultFilter = params.filter;
     }
     );
 
@@ -108,7 +108,7 @@ export class EcommerceShopComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Shop',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -41,7 +41,7 @@ export class BlogDetailComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Blog Detail',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

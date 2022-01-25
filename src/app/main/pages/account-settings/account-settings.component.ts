@@ -91,7 +91,7 @@ export class AccountSettingsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Account Settings',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

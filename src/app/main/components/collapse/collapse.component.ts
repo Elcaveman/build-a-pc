@@ -31,7 +31,7 @@ export class CollapseComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Collapse',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -33,7 +33,7 @@ export class InputGroupsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Input Groups',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -20,7 +20,7 @@ export class TableComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Bootstrap Tables',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -48,7 +48,7 @@ export class PaginationComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Pagination',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

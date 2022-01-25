@@ -42,7 +42,7 @@ export class BlogListComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Blog List',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

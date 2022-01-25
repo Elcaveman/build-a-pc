@@ -37,7 +37,7 @@ export class KnowledgeBaseQuestionComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Question',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

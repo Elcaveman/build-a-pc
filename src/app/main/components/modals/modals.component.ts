@@ -197,7 +197,7 @@ export class ModalsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Modals',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

@@ -190,7 +190,7 @@ export class SwiperComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Swiper',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

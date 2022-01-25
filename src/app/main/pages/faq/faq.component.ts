@@ -43,7 +43,7 @@ export class FaqComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'FAQ',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

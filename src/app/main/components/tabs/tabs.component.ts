@@ -31,7 +31,7 @@ export class TabsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Tabs',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

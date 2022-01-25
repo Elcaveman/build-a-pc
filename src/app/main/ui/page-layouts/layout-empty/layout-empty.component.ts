@@ -20,7 +20,7 @@ export class LayoutEmptyComponent implements OnInit {
   ngOnInit() {
     this.contentHeader = {
       headerTitle: 'Layout Empty',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

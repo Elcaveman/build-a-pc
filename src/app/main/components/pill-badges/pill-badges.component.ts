@@ -30,7 +30,7 @@ export class PillBadgesComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Pill Badges',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

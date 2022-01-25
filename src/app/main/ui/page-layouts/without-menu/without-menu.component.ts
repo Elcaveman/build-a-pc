@@ -52,7 +52,7 @@ export class WithoutMenuComponent implements OnInit {
 
     this.contentHeader = {
       headerTitle: 'Layout without menu',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

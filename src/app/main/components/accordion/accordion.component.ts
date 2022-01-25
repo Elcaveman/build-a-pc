@@ -68,7 +68,7 @@ export class AccordionComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Accordion',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

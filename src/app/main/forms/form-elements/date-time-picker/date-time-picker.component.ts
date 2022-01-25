@@ -185,7 +185,7 @@ export class DateTimePickerComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Date & Time Picker',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

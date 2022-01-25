@@ -93,7 +93,7 @@ export class BlockuiComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'BlockUI',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

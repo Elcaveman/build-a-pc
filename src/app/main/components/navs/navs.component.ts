@@ -32,7 +32,7 @@ export class NavsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Navs',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

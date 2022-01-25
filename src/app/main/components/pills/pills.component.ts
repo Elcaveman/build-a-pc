@@ -31,7 +31,7 @@ export class PillsComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'pills',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

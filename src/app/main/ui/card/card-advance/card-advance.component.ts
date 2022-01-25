@@ -518,7 +518,7 @@ export class CardAdvanceComponent implements OnInit {
     // content header data
     this.contentHeader = {
       headerTitle: 'Advance Card',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

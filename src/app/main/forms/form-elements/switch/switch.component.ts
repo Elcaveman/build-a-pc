@@ -26,7 +26,7 @@ export class SwitchComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Switch',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

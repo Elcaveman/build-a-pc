@@ -66,7 +66,7 @@ export class BlogEditComponent implements OnInit {
     // Content Header
     this.contentHeader = {
       headerTitle: 'Blog Edit',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

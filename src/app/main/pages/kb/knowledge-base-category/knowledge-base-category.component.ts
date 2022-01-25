@@ -40,7 +40,7 @@ export class KnowledgeBaseCategoryComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Category',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

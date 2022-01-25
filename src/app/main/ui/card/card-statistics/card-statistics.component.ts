@@ -528,7 +528,7 @@ export class CardStatisticsComponent implements OnInit {
 
     this.contentHeader = {
       headerTitle: 'Statistics Cards',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

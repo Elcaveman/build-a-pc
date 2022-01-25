@@ -52,7 +52,7 @@ export class CarouselComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Carousel',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [

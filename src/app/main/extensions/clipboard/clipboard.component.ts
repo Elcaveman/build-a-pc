@@ -58,7 +58,7 @@ export class ClipboardComponent implements OnInit {
     // content header
     this.contentHeader = {
       headerTitle: 'Clipboard',
-      actionButton: true,
+      actionButton: false,
       breadcrumb: {
         type: '',
         links: [
