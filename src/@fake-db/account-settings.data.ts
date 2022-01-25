@@ -3,9 +3,9 @@ export class accountSettingsFakeData {
     accountSetting: {
       general: {
         avatar: 'assets/images/portrait/small/avatar-s-11.jpg',
-        username: 'johndoe',
-        fullName: 'John Doe',
-        email: 'granger007@hogward.com',
+        username: 'HAYAOUI',
+        fullName: 'Abdelhakim HAYAOUI',
+        email: 'Hayaoui@buildi-lya.ma',
         company: 'IBM Technology'
       },
       info: {

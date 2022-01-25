@@ -851,8 +851,86 @@ export class EcommerceFakeData {
       category: "storage",
       rating: 5,
     },
+    {
+      id: 61,
+      name: "Corsair Vengeance RGB Pro 16GB (2 x 8GB) DDR4-3200 PC4-25600 ",
+      slug: "Corsair-Vengeance-RGB-Pro-16GB-(2-x-8GB)-DDR4-3200-PC4-25600-",
+      description:
+        "Keep your AMD processor cool while keeping fan noise to a minimum with the Dark Rock Pro TR4 Computer CPU Air Cooler from be quiet!. Designed exclusively for AMD TR4 sockets, the Dark Rock Pro TR4 is rated to cool up to 250W TDP processors. The coolers 135mm and 120mm PWM fans are designed for quiet operation",
+      brand: "Corsair",
+      price: 1090,
+      image:
+        "assets/images/pages/eCommerce/parts/ram/Corsair Vengeance RGB Pro 16GB (2 x 8GB) DDR4-3200 PC4-25600 .jpg",
+      hasFreeShipping: true,
+      category: "ram",
+      rating: 5,
+    },
+    {
+      id: 62,
+      name: "Crucial Ballistix Gaming 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL",
+      slug: "Crucial Ballistix Gaming 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL",
+      description:
+        "Keep your AMD processor cool while keeping fan noise to a minimum with the Dark Rock Pro TR4 Computer CPU Air Cooler from be quiet!. Designed exclusively for AMD TR4 sockets, the Dark Rock Pro TR4 is rated to cool up to 250W TDP processors. The coolers 135mm and 120mm PWM fans are designed for quiet operation",
+      brand: "Crucial",
+      price: 1090,
+      image:
+        "assets/images/pages/eCommerce/parts/ram/Crucial Ballistix Gaming 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL.jpg",
+      hasFreeShipping: true,
+      category: "ram",
+      rating: 5,
+    },
+    {
+      id: 63,
+      name: "Crucial Ballistix Gaming 32GB (2 x 16GB) DDR4-3200 PC4-25600",
+      slug: "Crucial Ballistix Gaming 32GB (2 x 16GB) DDR4-3200 PC4-25600",
+      description:
+        "Keep your AMD processor cool while keeping fan noise to a minimum with the Dark Rock Pro TR4 Computer CPU Air Cooler from be quiet!. Designed exclusively for AMD TR4 sockets, the Dark Rock Pro TR4 is rated to cool up to 250W TDP processors. The coolers 135mm and 120mm PWM fans are designed for quiet operation",
+      brand: "Crucial",
+      price: 1090,
+      image:
+        "assets/images/pages/eCommerce/parts/ram/Crucial Ballistix Gaming 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL.jpg",
+      hasFreeShipping: true,
+      category: "ram",
+      rating: 5,
+    },
+    {
+      id: 64,
+      name: "G.Skill Ripjaws V 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL16 ",
+      slug: "G.Skill Ripjaws V 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL16 ",
+      description:
+        "Keep your AMD processor cool while keeping fan noise to a minimum with the Dark Rock Pro TR4 Computer CPU Air Cooler from be quiet!. Designed exclusively for AMD TR4 sockets, the Dark Rock Pro TR4 is rated to cool up to 250W TDP processors. The coolers 135mm and 120mm PWM fans are designed for quiet operation",
+      brand: "G.Skill",
+      price: 1090,
+      image:
+        "assets/images/pages/eCommerce/parts/ram/G.Skill Ripjaws V 16GB (2 x 8GB) DDR4-3200 PC4-25600 CL16 .jpg",
+      hasFreeShipping: true,
+      category: "ram",
+      rating: 5,
+    },
+    {
+      id: 64,
+      name: "G.Skill Ripjaws V 32GB (2 x 16GB) DDR4-3200 PC4-25600 CL16",
+      slug: "G.Skill Ripjaws V 32GB (2 x 16GB) DDR4-3200 PC4-25600 CL16",
+      description:
+        "Keep your AMD processor cool while keeping fan noise to a minimum with the Dark Rock Pro TR4 Computer CPU Air Cooler from be quiet!. Designed exclusively for AMD TR4 sockets, the Dark Rock Pro TR4 is rated to cool up to 250W TDP processors. The coolers 135mm and 120mm PWM fans are designed for quiet operation",
+      brand: "G.Skill",
+      price: 1090,
+      image:
+        "assets/images/pages/eCommerce/parts/ram/G.Skill Ripjaws V 32GB (2 x 16GB) DDR4-3200 PC4-25600 CL16.jpg",
+      hasFreeShipping: true,
+      category: "ram",
+      rating: 5,
+    },
   ];
 
+
+
+
+
+
+
+
+  
   public static relatedProducts = [
     {
       id: 3,
