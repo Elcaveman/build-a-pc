@@ -149,9 +149,10 @@
                       placeholder="Coupons"
                       aria-label="Coupons"
                       aria-describedby="input-coupons"
+                      [(ngModel)] = "coupon"
                     />
                     <div class="input-group-append">
-                      <span class="input-group-text text-primary" id="input-coupons">Apply</span>
+                      <span class="input-group-text text-primary" id="input-coupons" (click)="applyCoupon(coupon)">Apply</span>
                     </div>
                   </div>
                   <hr />
@@ -159,31 +160,31 @@
                     <h6 class="price-title">Price Details</h6>
                     <ul class="list-unstyled">
                       <li class="price-detail">
-                        <div class="detail-title">Total MRP</div>
-                        <div class="detail-amt">$598</div>
+                        <div class="detail-title">Raw Total</div>
+                        <div class="detail-amt">{{checkoutDetails.total}}MAD</div>
                       </li>
                       <li class="price-detail">
-                        <div class="detail-title">Bag Discount</div>
-                        <div class="detail-amt discount-amt text-success">-25$</div>
+                        <div class="detail-title">Discount</div>
+                        <div class="detail-amt discount-amt text-success">{{checkoutDetails.discount}}MAD</div>
                       </li>
                       <li class="price-detail">
                         <div class="detail-title">Estimated Tax</div>
-                        <div class="detail-amt">$1.3</div>
-                      </li>
-                      <li class="price-detail">
-                        <div class="detail-title">EMI Eligibility</div>
-                        <a href="javascript:void(0)" class="detail-amt text-primary">Details</a>
+                        <div class="detail-amt">{{checkoutDetails.estimatedTax}}MAD</div>
                       </li>
                       <li class="price-detail">
                         <div class="detail-title">Delivery Charges</div>
-                        <div class="detail-amt discount-amt text-success">Free</div>
+                        <div class="detail-amt discount-amt text-success" 
+                        *ngIf="checkoutDetails.deliveryCharges == 0">Free</div>
+                        
+                        <div class="detail-amt discount-amt text-warning" 
+                        *ngIf="checkoutDetails.deliveryCharges>0">{{checkoutDetails.deliveryCharges}}MAD</div>
                       </li>
                     </ul>
                     <hr />
                     <ul class="list-unstyled">
                       <li class="price-detail">
                         <div class="detail-title detail-total">Total</div>
-                        <div class="detail-amt font-weight-bolder">$574</div>
+                        <div class="detail-amt font-weight-bolder">{{checkoutTotal()}}MAD</div>
                       </li>
                     </ul>
                     <button
@@ -428,66 +429,73 @@
                   <p class="card-text text-muted mt-25">Be sure to click on correct payment option</p>
                 </div>
                 <div class="card-body">
-                  <h6 class="card-holder-name my-75">John Doe</h6>
+                  <h6 class="card-holder-name my-75">{{cardDetails.owner}}</h6>
                   <div class="custom-control custom-radio">
                     <input
                       type="radio"
                       id="customColorRadio1"
                       name="paymentOptions"
                       class="custom-control-input"
+                      (change) = "setPaymentOptions('default')"
                       checked
                     />
                     <label class="custom-control-label" for="customColorRadio1">
-                      US Unlocked Debit Card 12XX XXXX XXXX 0000
+                      US Unlocked Debit Card {{cardDetails.cardNumber}}
                     </label>
-                  </div>
-                  <div class="customer-cvv mt-1">
-                    <div class="form-inline">
-                      <label class="mb-50" for="card-holder-cvv">Enter CVV:</label>
-                      <input
-                        type="password"
-                        class="form-control ml-sm-75 ml-0 mb-50 input-cvv"
-                        name="input-cvv"
-                        id="card-holder-cvv"
-                      />
-                      <button type="button" class="btn btn-primary btn-cvv ml-0 ml-sm-1 mb-50" rippleEffect>
-                        Continue
-                      </button>
-                    </div>
                   </div>
                   <hr class="my-2" />
                   <ul class="other-payment-options list-unstyled">
                     <li class="py-50">
                       <div class="custom-control custom-radio">
-                        <input type="radio" id="customColorRadio2" name="paymentOptions" class="custom-control-input" />
+                        <input type="radio" id="customColorRadio2" name="paymentOptions" class="custom-control-input"
+                        (change) = "setPaymentOptions('card')"
+                        />
                         <label class="custom-control-label" for="customColorRadio2"> Credit / Debit / ATM Card </label>
+                        <div class="customer-cvv mt-1" *ngIf="paymentOptions.otherCard">
+                          <div class="form-inline">
+                            <label class="mb-50" for="card-holder-name">Enter FullName:</label>
+                            <input
+                              type="text"
+                              class="form-control ml-sm-75 ml-0 mb-50 input"
+                              name="input-name"
+                              id="card-holder-name"
+                              [(ngModel)]="tempCardDetails.owner"
+                            />
+                            <label class="mb-50" for="card-number">Enter Card Number:</label>
+                            <input
+                              type="text"
+                              class="form-control ml-sm-75 ml-0 mb-50 input"
+                              name="input-number"
+                              id="card-number"
+                              [(ngModel)]="tempCardDetails.cardNumber"
+                            />
+                            <button type="button" class="btn btn-primary btn-cvv ml-0 ml-sm-1 mb-50" 
+                            (click) = "setDefaultCard()"
+                            rippleEffect>
+                              Set as Default Card
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </li>
                     <li class="py-50">
                       <div class="custom-control custom-radio">
-                        <input type="radio" id="customColorRadio3" name="paymentOptions" class="custom-control-input" />
-                        <label class="custom-control-label" for="customColorRadio3"> Net Banking </label>
-                      </div>
-                    </li>
-                    <li class="py-50">
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customColorRadio4" name="paymentOptions" class="custom-control-input" />
-                        <label class="custom-control-label" for="customColorRadio4"> EMI (Easy Installment) </label>
-                      </div>
-                    </li>
-                    <li class="py-50">
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customColorRadio5" name="paymentOptions" class="custom-control-input" />
+                        <input type="radio" id="customColorRadio5" name="paymentOptions" class="custom-control-input" 
+                        (change) = "setPaymentOptions('delivery')"/>
                         <label class="custom-control-label" for="customColorRadio5"> Cash On Delivery </label>
                       </div>
                     </li>
                   </ul>
-                  <hr class="my-2" />
-                  <div class="gift-card mb-25">
-                    <p class="card-text">
-                      <i data-feather="plus-circle" class="mr-50 font-medium-5"></i>
-                      <span class="align-middle">Add Gift Card</span>
-                    </p>
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-next delivery-address"
+                      *ngIf="!paymentOptions.onDelivery"
+                      (click)="transactionStarted = true"
+                      rippleEffect
+                    >
+                      Start Transaction
+                    </button>
                   </div>
                 </div>
               </div>
@@ -500,23 +508,26 @@
                 <div class="card-body">
                   <ul class="list-unstyled price-details">
                     <li class="price-detail">
-                      <div class="details-title">Price of 3 items</div>
-                      <div class="detail-amt">
-                        <strong>$699.30</strong>
-                      </div>
-                    </li>
-                    <li class="price-detail">
-                      <div class="details-title">Delivery Charges</div>
-                      <div class="detail-amt discount-amt text-success">Free</div>
-                    </li>
-                  </ul>
-                  <hr />
-                  <ul class="list-unstyled price-details">
-                    <li class="price-detail">
                       <div class="details-title">Amount Payable</div>
-                      <div class="detail-amt font-weight-bolder">$699.30</div>
+                      <div class="detail-amt font-weight-bolder">{{checkoutTotal()}}MAD</div>
                     </li>
                   </ul>
+                  <div class="customer-cvv mt-1" *ngIf="!paymentOptions.onDelivery && transactionStarted">
+                    <div class="form-inline">
+                      <label class="mb-50" for="card-holder-cvv">Enter CVV:</label>
+                      <input
+                        type="password"
+                        class="form-control ml-sm-75 ml-0 mb-50 input-cvv"
+                        name="input-cvv"
+                        id="card-holder-cvv"
+                        [(ngModel)]="cvv"
+                      />
+                      <button type="button" class="btn btn-primary btn-cvv ml-0 ml-sm-1 mb-50" rippleEffect
+                      (click)="validateCVV(cvv)">
+                        Continue
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -23,6 +23,7 @@ import { EcommerceWishlistComponent } from 'app/main/apps/ecommerce/ecommerce-wi
 import { EcommerceCheckoutComponent } from 'app/main/apps/ecommerce/ecommerce-checkout/ecommerce-checkout.component';
 import { EcommerceCheckoutItemComponent } from 'app/main/apps/ecommerce/ecommerce-checkout/ecommerce-checkout-item/ecommerce-checkout-item.component';
 import { CoreCardModule } from '@core/components/core-card/core-card.module';
+import { ToastrService, ToastrModule } from 'ngx-toastr';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -87,7 +88,7 @@ const routes: Routes = [
     EcommerceCheckoutComponent,
     EcommerceItemComponent,
     EcommerceCheckoutItemComponent,
-    EcommerceBuildComponent
+    EcommerceBuildComponent,
   ],
   imports: [
     CommonModule,
@@ -100,9 +101,11 @@ const routes: Routes = [
     CoreCardModule,
     CoreCommonModule,
     NgbModule,
-    NouisliderModule
+    NouisliderModule,
+    ToastrModule
   ],
   providers: [
+    ToastrService,
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
