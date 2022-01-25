@@ -10,48 +10,18 @@
     <div class="multi-range-price">
       <h6 class="filter-title mt-0">Multi Range</h6>
       <ul class="list-unstyled price-range" id="price-range">
-        <li>
+        <li *ngFor="let priceRange of priceRanges">
           <div class="custom-control custom-radio">
-            <input type="radio" id="priceAll" name="price-range" class="custom-control-input" checked />
-            <label class="custom-control-label" for="priceAll">All</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="priceRange1" name="price-range" class="custom-control-input" />
-            <label class="custom-control-label" for="priceRange1">&lt;=$10</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="priceRange2" name="price-range" class="custom-control-input" />
-            <label class="custom-control-label" for="priceRange2">$10 - $100</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="priceARange3" name="price-range" class="custom-control-input" />
-            <label class="custom-control-label" for="priceARange3">$100 - $500</label>
-          </div>
-        </li>
-        <li>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="priceRange4" name="price-range" class="custom-control-input" />
-            <label class="custom-control-label" for="priceRange4">&gt;= $500</label>
+            <input type="radio" [id]="priceRange" name="price-range" class="custom-control-input"
+            [checked] = "priceRange=='All'"
+            (change) = "filterByPrice(priceRange)"
+            />
+            <label class="custom-control-label" [for]="priceRange">{{priceRange}}</label>
           </div>
         </li>
       </ul>
     </div>
     <!-- Price Filter ends -->
-
-    <!-- Price Slider starts -->
-    <div class="price-slider">
-      <h6 class="filter-title">Price Range</h6>
-      <div class="price-slider">
-        <nouislider [connect]="true" [min]="0" [max]="10" [step]="5" [(ngModel)]="sliderPriceValue"></nouislider>
-      </div>
-    </div>
-    <!-- Price Range ends -->
 
     <!-- Categories Starts -->
     <div id="product-categories">

@@ -8,7 +8,6 @@ import { EcommerceService } from 'app/main/apps/ecommerce/ecommerce.service';
 })
 export class EcommerceSidebarComponent implements OnInit {
   // Public
-  public sliderPriceValue = [1, 6];
   @Input() defaultFilter ="all";
   public filters = [{name:'all',verboseName:'All'}
   ,{name:'cpu',verboseName:'CPU - Microprocessor'}
@@ -22,6 +21,7 @@ export class EcommerceSidebarComponent implements OnInit {
   ,{name:'sound',verboseName:'Sound Card'}
   ,{name:'other',verboseName:'Accessory'}
 ];
+  public priceRanges =["All","<=100MAD","100MAD - 1000MAD","1000MAD - 5000MAD",">=5000MAD"];
   constructor(private _ecommerceService: EcommerceService,) {}
 
   ngOnInit(): void {
@@ -30,5 +30,24 @@ export class EcommerceSidebarComponent implements OnInit {
   filterProduct(key,value?:string){
     if (value) this._ecommerceService.filterProduct(key,value);
     else this._ecommerceService.filterProduct(key,this.defaultFilter);
+  }
+  filterByPrice(priceRange){
+    switch (priceRange) {
+      case this.priceRanges[1]:
+        this._ecommerceService.filterByPrice(0,100);
+        break;
+      case this.priceRanges[2]:
+        this._ecommerceService.filterByPrice(100,1000);
+        break;
+      case this.priceRanges[3]:
+        this._ecommerceService.filterByPrice(1000,5000);
+        break;
+      case this.priceRanges[4]:
+        this._ecommerceService.filterByPrice(5000,null);
+        break;
+      default:
+        this._ecommerceService.filterByPrice(null,null);
+        break;
+    }
   }
 }

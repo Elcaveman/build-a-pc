@@ -40,8 +40,6 @@ export class EcommerceService implements Resolve<any> {
   };
   private filterRef = (key,value) => (a) =>{
     const fieldA = a[key];
-
-    let comparison = 0;
     return fieldA === value;
   }
 
@@ -191,7 +189,23 @@ export class EcommerceService implements Resolve<any> {
     }
     this.onProductListChange.next(sortedData);
   }
-
+  filterByPrice(start:number,end:number){
+    let filtedData;
+    console.log("in");
+    filtedData = this.productList.filter((product)=>{
+        if (end !=null){
+          if (start !=null) return start<=product.price && product.price<end;
+          else return product.price<=end;
+        }
+        else if (start!=null){
+          return start<=product.price
+        }
+        else{
+          return true;
+        }
+      });
+    this.onProductListChange.next(filtedData); 
+  }
   /**
    * Add In Wishlist
    *
