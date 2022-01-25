@@ -149,14 +149,14 @@ export class EcommerceBuildComponent implements OnInit {
   }
   applyCoupon(coupon){
     if (coupon == "MUDAMUDA"){
-      this.checkoutDetails.discount = 50;
+      this.checkoutDetails.discount = -50;
       this.toastrCustomSuccess("coupon MUDAMUDA has been Applied! you got a 50MAD reduction!","Valid coupon! 👌");
     }
-    if (coupon == "ENSIAS"){
-      this.checkoutDetails.discount = 1000;
+    else if (coupon == "ENSIAS"){
+      this.checkoutDetails.discount = -1000;
       this.toastrCustomSuccess("coupon ENSIAS has been Applied! you got a 1000MAD reduction!","Valid coupon! 👌");
     }
-    this.toastrCustomFailure("This Coupon is either Invalid or have expired","Invalid coupon 😢")
+    else this.toastrCustomFailure("This Coupon is either Invalid or have expired","Invalid coupon 😢")
   }
 
   eventHandler(event,category){
@@ -177,7 +177,6 @@ export class EcommerceBuildComponent implements OnInit {
    * Stepper Next
    */
   nextStep() {
-    this.toastrCustomSuccess("Your delivery address has been correctly set","Address Has Been Set!");
     this.checkoutStepper.next();
   }
   /**
@@ -195,6 +194,7 @@ export class EcommerceBuildComponent implements OnInit {
   validateNextStep(addressForm) {
     if (addressForm.valid) {
       this.nextStep();
+      this.toastrCustomSuccess("Your delivery address has been correctly set","Address Has Been Set!");
     }
   }
   
